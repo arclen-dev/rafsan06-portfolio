@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-border: var(--border);
+}
+
+:root {
+  --accent: #ea580c; /* Dark Orange */
+  --accent-secondary: #eab308; /* Yellow/Gold */
+  --bg: #ffffff;
+  --surface: #fffbf7; /* Warm white */
+  --ink: #0f172a;
+  --border: #f1f5f9;
+  --dot-color: #fde6d2;
+}
+
+.dark {
+  --accent: #fb923c; /* Lighter orange for dark mode */
+  --accent-secondary: #facc15; /* Lighter yellow */
+  --bg: #0c0a09;
+  --surface: #1c1917;
+  --ink: #fafaf9;
+  --border: #292524;
+  --dot-color: #44403c;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased selection:bg-accent/20 selection:text-ink transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .card-minimal {
+    @apply bg-surface border border-border shadow-xs rounded-2xl transition-all duration-300;
+  }
+  
+  .text-subtle {
+    @apply text-slate-400 font-normal;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-gray-950/70 border border-white/20 dark:border-gray-800/20 backdrop-blur-md shadow-xl;
+  }
+
+  .hero-gradient {
+    @apply bg-linear-to-tr from-accent/5 via-transparent to-accent-secondary/5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700;
+}
+
+.decoration-dots {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
