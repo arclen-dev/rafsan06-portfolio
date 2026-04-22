@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Terminal } from "lucide-react";
-import profilePic from "../assests/picture.jpg";
+import profilePic from "/src/assests/picture.jpg";
 
 export default function Hero() {
   return (
