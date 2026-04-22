@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { ArrowRight, Terminal } from "lucide-react";
-import profilePic from "../assets/picture.jpg";
 
 
 export default function Hero() {
@@ -82,7 +81,7 @@ export default function Hero() {
           {/* Circular Image Container */}
           <div className="relative aspect-square rounded-full border-8 border-bg overflow-hidden shadow-2xl z-10">
             <img 
-              src={profilePic} 
+              src="/profile.jpg" 
               alt="Mansifur Rahman Rafsan"
               className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
             />
