@@ -23,7 +23,7 @@ export function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-minimal p-8 group hover:border-accent/40 bg-bg"
+              className="card-minimal p-8 group hover:border-accent/40"
             >
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-6 block border-b border-border pb-4 group-hover:border-accent/20">{edu.period}</span>
               <h3 className="text-lg font-bold text-ink mb-1">{edu.school}</h3>

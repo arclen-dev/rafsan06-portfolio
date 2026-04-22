@@ -37,7 +37,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -5 }}
-              className="card-minimal group hover:border-accent/30 p-8 flex flex-col bg-white"
+              className="card-minimal group hover:border-accent/30 p-8 flex flex-col"
             >
               <div className="flex justify-between items-start mb-10">
                 <div className="text-slate-400 group-hover:text-accent transition-colors">
