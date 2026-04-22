@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Terminal } from "lucide-react";
-import profilePic from "/src/assests/picture.jpg";
+
 
 export default function Hero() {
   return (
@@ -81,12 +81,10 @@ export default function Hero() {
           {/* Circular Image Container */}
           <div className="relative aspect-square rounded-full border-8 border-bg overflow-hidden shadow-2xl z-10">
             <img 
-              src={profilePic} 
+              src="../assests/picture.jpg" 
               alt="Mansifur Rahman Rafsan"
               className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800";
-              }}
+              
             />
           </div>
 
